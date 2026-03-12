@@ -5,6 +5,15 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     background-image: url('assets/background.png');
@@ -12,6 +21,8 @@ body {
     background-size: cover;
     color: #444444;
     font-family: "DM Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
 /* ===== NAVBAR ===== */
@@ -109,23 +120,56 @@ body {
 }
 
 /* ===== PATCH NOTES ===== */
-.patch-container {
-    max-width: 900px;
-    margin: 40px auto 80px;
-    padding: 0 20px;
+.patch-wrapper {
+    flex: 1;
     display: flex;
-    flex-direction: column;
-    gap: 30px;
+    justify-content: center;
+    gap: 20px;
+    overflow: hidden;               /* ruimte tussen cards en indicator */
+    margin-bottom: 80px;
 }
 
+.patch-container {
+    width: 900px;
+    height: 100%;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+}
+
+/* Chrome, Edge, Safari */
+.patch-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Firefox */
+.patch-container {
+    scrollbar-width: none;
+}
+
+/* IE/Legacy Edge */
+.patch-container {
+    -ms-overflow-style: none;
+}
+
+.snap-section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+
+    padding: 80px 20px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
 .patch-card {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;   /* center */
     background: white;
     padding: 24px;
     border-radius: 14px;
-    box-shadow: 0 4px 4px rgba(0,0,0,0.15);
-    overflow: hidden;
-    position: relative;
-    border: 0.5px solid #7777;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
 }
 
 .patch-content {
@@ -133,20 +177,20 @@ body {
     line-height: 1.6;
     color: #444;
 
-    max-height: 60px;
+    max-height: 70px;
     overflow: hidden;
     transition: max-height 0.4s ease;
 }
 
 .patch-card.expanded .patch-content {
-    max-height: 500px;
+    max-height: 1000px;
 }
 
 .read-more {
     margin-top: 12px;
     display: inline-block;
     font-size: 14px;
-    color: #26C743;
+    color: #2ca65c;
     cursor: pointer;
     font-weight: 500;
 }
@@ -175,4 +219,99 @@ body {
     color: #26C743;
     cursor: pointer;
     font-weight: 500;
+}
+
+.scroll-indicator {
+    width: 6px;
+    height: 500px;
+
+    position: sticky;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background: rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.scroll-progress {
+    width: 100%;
+    height: 0%;
+    background: #2ca65c;
+    transition: height 0.15s ease;
+}
+
+/* Algemene footer styling */
+footer {
+  background-color: #f8f8f8;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Binnencontainer */
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+/* Merk / logo sectie */
+.footer-brand img {
+  width: 150px; /* pas aan naar echte logo grootte */
+  margin-bottom: 10px;
+}
+
+.footer-brand p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Link secties */
+.footer-links h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.footer-links a:hover {
+  color: #007f00; /* lichte hover effect */
+}
+
+/* CTA knop */
+.footer-cta a {
+  display: inline-block;
+  background-color: #28c840; /* groene knop */
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.footer-cta a:hover {
+  background-color: #1fa62d;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-cta {
+    margin-top: 20px;
+  }
 }
