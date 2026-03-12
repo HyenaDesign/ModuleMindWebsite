@@ -1,0 +1,519 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<title>FAQ</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Cherry+Cream+Soda&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kdam+Thmor+Pro&family=Kite+One&family=Momo+Trust+Sans:wght@200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Radio+Canada:ital,wght@0,300..700;1,300..700&family=Rubik+Marker+Hatch&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<style>
+:root {
+      --bg: #fbfbf8;
+      --text: #111111;
+      --text-soft: #444444;
+      --text-muted: #666666;
+      --green: #22c55e;
+      --green-dark: #16a34a;
+      --green-soft: #7dd35d;
+      --green-soft-dark: #69c24b;
+      --white: #ffffff;
+      --card-border: rgba(17, 17, 17, 0.08);
+      --card-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      --section-width: 1200px;
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+body{
+    font-family: "DM Sans", sans-serif;
+    margin:0;
+    overflow-x: hidden;
+    background: url("images/Blog.png") center center / cover no-repeat;
+    color:#333;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+  /* ===== Header ===== */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(17, 17, 17, 0.05);
+    }
+
+    header .logo img {
+      height: 40px;
+      width: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #111;
+      font-weight: 500;
+      transition: color 0.2s ease;
+      position: relative;
+    }
+
+    .nav-links a:not(.cta-btn)::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background: var(--green);
+      transition: width 0.22s ease;
+    }
+
+    .nav-links a:not(.cta-btn):hover::after {
+      width: 100%;
+    }
+
+    .nav-links a:hover {
+      color: var(--green);
+    }
+
+    .nav-links .cta-btn {
+      background-color: var(--green);
+      color: #fff;
+      padding: 10px 25px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .nav-links .cta-btn:hover {
+      background-color: var(--green-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(34, 197, 94, 0.22);
+      color: #fff;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 28px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #111;
+    }
+
+/* ===== HERO ===== */
+
+.help-hero {
+  display: flex;
+  justify-content: center; /* horizontal centering */
+  align-items: center;     /* vertical centering */
+  flex-direction: column;  /* stack children vertically */
+  padding: 0 20px;         /* remove top/bottom padding because flex centering handles vertical */
+  height: 500px;           /* keep your fixed height */
+  background: linear-gradient(90deg,#f2f2f2,#eef6e9);
+  text-align: center;
+}
+
+.hero-content{
+    max-width:700px;
+    margin:auto;
+}
+
+.hero-content h1{
+    font-size:28px;
+    margin-bottom:25px;
+}
+
+/* ===== SEARCH ===== */
+
+.search-box{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+}
+
+.search-box input{
+    padding:12px 16px;
+    width:320px;
+    border-radius:8px;
+    border:1px solid #ddd;
+}
+
+.search-box button{
+    background:#5fb65f;
+    border:none;
+    color:white;
+    padding:12px 20px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.popular{
+    margin-top:12px;
+    font-size:13px;
+    color:#777;
+}
+
+/* ===== FAQ SECTION ===== */
+
+.faq{
+    padding:60px 20px 100px;
+}
+
+.faq-container{
+    max-width:700px;
+    margin:auto;
+    text-align:center;
+}
+
+.faq h2{
+    color:#4CAF50;
+    margin-bottom:10px;
+}
+
+.faq-subtitle{
+    color:#666;
+    margin-bottom:40px;
+    font-size:14px;
+}
+
+/* ===== THEME CARDS ===== */
+
+.theme{
+    background:white;
+    border-radius:10px;
+    margin-bottom:14px;
+    border:1px solid #e6e6e6;
+    box-shadow:0 4px 10px rgba(0,0,0,0.05);
+    text-align:left;
+}
+
+.theme-btn{
+    width:100%;
+    padding:16px 18px;
+    border:none;
+    background:none;
+    font-size:15px;
+    font-weight:500;
+    cursor:pointer;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.theme-left{
+    display:flex;
+    gap:10px;
+    align-items:center;
+}
+
+.theme-right{
+    display:flex;
+    gap:10px;
+    align-items:center;
+}
+
+.count{
+    background:#f1f1f1;
+    color:#666;
+    font-size:13px;
+    padding:2px 8px;
+    border-radius:6px;
+}
+
+.arrow{
+    color:#999;
+    font-size:18px;
+}
+
+/* ===== QUESTIONS ===== */
+
+.questions{
+    display:none;
+    padding:0 18px 16px 18px;
+}
+
+.theme.active .questions{
+    display:block;
+}
+
+.question{
+    border-top:1px solid #eee;
+}
+
+.question-btn{
+    width:100%;
+    text-align:left;
+    padding:12px 0;
+    border:none;
+    background:none;
+    font-size:14px;
+    cursor:pointer;
+}
+
+.answer{
+    display:none;
+    padding-bottom:10px;
+    color:#666;
+    font-size:14px;
+}
+
+.question.active .answer{
+    display:block;
+}
+
+footer {
+      background: #efefef;
+      margin-top: 10px;
+      border-top: 1px solid rgba(17, 17, 17, 0.05);
+    }
+
+    .footer-inner {
+      width: min(var(--section-width), calc(100% - 40px));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1fr auto;
+      gap: 32px;
+      padding: 34px 0;
+      align-items: start;
+    }
+
+    .footer-brand img {
+      height: 34px;
+      margin-bottom: 12px;
+    }
+
+    .footer-brand p,
+    .footer-links a {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.6;
+      text-decoration: none;
+    }
+
+    .footer-links h4 {
+      margin-bottom: 12px;
+      font-size: 1rem;
+      text-decoration: none;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      gap: 6px;
+    }
+
+    .footer-cta {
+      align-self: center;
+    }
+
+    .footer-cta a {
+      display: inline-block;
+      background: var(--green);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background-color 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+
+    .footer-cta a:hover {
+      background: var(--green-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(34, 197, 94, 0.22);
+    }
+
+/* ===== MOBILE RESPONSIVE ===== */
+
+@media (max-width:600px){
+
+.help-hero{
+    padding:70px 20px 80px;
+}
+
+.hero-content h1{
+    font-size:22px;
+}
+
+.search-box{
+    flex-direction:column;
+    align-items:center;
+}
+
+.search-box input{
+    width:100%;
+    max-width:300px;
+}
+
+.search-box button{
+    width:100%;
+    max-width:300px;
+}
+
+.faq{
+    padding:40px 16px 80px;
+}
+
+.theme-btn{
+    padding:14px 16px;
+}
+
+.question-btn{
+    font-size:13px;
+}
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<header>
+    <div class="logo">
+      <img src="images/Group 5.png" alt="ModuleMind Logo">
+    </div>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="#">About</a>
+      <a href="#">Pricing</a>
+      <a href="#">Contact</a>
+      <a href="#" class="cta-btn">Probeer het nu!</a>
+    </nav>
+
+    <button class="hamburger" aria-label="Menu">&#9776;</button>
+  </header>
+
+<section class="help-hero">
+
+<div class="hero-content">
+
+<h1>Waarmee kunnen we je helpen?</h1>
+
+<div class="search-box">
+<input type="text" placeholder="Zoek een onderwerp...">
+<button>Zoeken</button>
+</div>
+
+<p class="popular">
+Populaire onderwerpen: Modules delen
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- FAQ -->
+
+<section class="faq">
+
+<div class="faq-container">
+
+<h2>FAQ</h2>
+
+<p class="faq-subtitle">
+Blader door de meest voorkomende onderwerpen en vind snel een antwoord op je vraag.
+</p>
+
+<!-- THEME 1 --> <div class="theme"> <button class="theme-btn"> <div class="theme-left"> 📄 <span>Modules maken</span> </div> <div class="theme-right"> <span class="count">87</span> <span class="arrow">›</span> </div> </button> <div class="questions"> <div class="question"> <button class="question-btn"> Hoe maak ik een module? </button> <div class="answer"> Ga naar het dashboard en klik op "Nieuwe module maken". </div> </div> <div class="question"> <button class="question-btn"> Kan ik een module bewerken? </button> <div class="answer"> Ja. Open de module en klik op "bewerken". </div> </div> </div> </div> <!-- THEME 2 --> <div class="theme"> <button class="theme-btn"> <div class="theme-left"> 📁 <span>Oefeningen delen</span> </div> <div class="theme-right"> <span class="count">32</span> <span class="arrow">›</span> </div> </button> <div class="questions"> <div class="question"> <button class="question-btn"> Hoe deel ik oefeningen? </button> <div class="answer"> Klik op de knop "delen" naast de oefening. </div> </div> <div class="question"> <button class="question-btn"> Met wie kan ik oefeningen delen? </button> <div class="answer"> Met studenten of collega's. </div> </div> </div> </div> <!-- THEME 3 --> <div class="theme"> <button class="theme-btn"> <div class="theme-left"> 📊 <span>Resultaten en voortgang</span> </div> <div class="theme-right"> <span class="count">13</span> <span class="arrow">›</span> </div> </button> <div class="questions"> <div class="question"> <button class="question-btn"> Waar zie ik resultaten? </button> <div class="answer"> Resultaten vind je in het dashboard bij statistieken. </div> </div> </div> </div> <!-- THEME 4 --> <div class="theme"> <button class="theme-btn"> <div class="theme-left"> 💬 <span>Algemene vragen</span> </div> <div class="theme-right"> <span class="count">4</span> <span class="arrow">›</span> </div> </button> <div class="questions"> <div class="question"> <button class="question-btn"> Hoe verander ik mijn wachtwoord? </button> <div class="answer"> Ga naar accountinstellingen en kies "wachtwoord wijzigen". </div> </div> </div> </div>
+
+</div>
+</section>
+
+<footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="images/Group 5.png" alt="ModuleMind Logo">
+        <p>
+          Innovatief platform voor AI ondersteund leren<br>
+          voor het secundair onderwijs
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Pagina's</h4>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Pricing</a>
+        <a href="#">FAQ</a>
+      </div>
+
+      <div class="footer-links">
+        <h4>Product</h4>
+        <a href="#">AI-oefeningen</a>
+        <a href="#">Feedback systeem</a>
+        <a href="#">Study analyse</a>
+      </div>
+
+      <div class="footer-cta">
+        <a href="#">Probeer het nu !</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+
+/* THEME ACCORDION */
+
+document.querySelectorAll(".theme-btn").forEach(button => {
+
+button.addEventListener("click", () => {
+
+const theme = button.parentElement;
+
+theme.classList.toggle("active");
+
+});
+
+});
+
+
+/* QUESTION ACCORDION */
+
+document.querySelectorAll(".question-btn").forEach(button => {
+
+button.addEventListener("click", () => {
+
+const question = button.parentElement;
+
+question.classList.toggle("active");
+
+});
+
+});
+
+</script>
+
+
+</body>
+</html>
