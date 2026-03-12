@@ -14,6 +14,12 @@ html, body {
     overflow: hidden;
 }
 
+@media (max-width: 768px) {
+    html, body {
+        overflow: auto;
+    }
+}
+
 body {
     font-family: 'Inter', sans-serif;
     background-image: url('assets/background.png');
@@ -305,6 +311,40 @@ body {
     gap: 20px;
     overflow: hidden;               /* ruimte tussen cards en indicator */
     margin-bottom: 80px;
+}
+/* ===== MOBILE FIX FOR PATCH CARDS ===== */
+@media (max-width: 768px) {
+    html, body {
+        overflow: auto; /* laat mobiel scrollen */
+        height: auto;   /* voorkom dat 100% height het blokkeert */
+    }
+
+    .patch-wrapper {
+        flex-direction: column; /* cards onder elkaar */
+        overflow: visible;      /* laat content zichtbaar zijn */
+        margin-bottom: 40px;    /* iets minder ruimte onderaan mobiel */
+    }
+
+    .patch-container {
+        width: 100%;
+        max-width: 100%;
+        height: auto;           /* pas hoogte aan mobiele inhoud */
+        overflow-y: visible;    /* laat scrollen binnen pagina in plaats van vast */
+    }
+
+    .snap-section {
+        padding: 40px 16px;     /* iets kleinere padding mobiel */
+    }
+
+    .patch-card {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;         /* blijft gecentreerd */
+    }
+
+    .scroll-indicator {
+        display: none;          /* indicator vaak niet handig op mobiel */
+    }
 }
 
 .patch-container {
