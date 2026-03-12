@@ -916,6 +916,7 @@ span {
 .price-btn{
   margin-top:auto;
   font-size:14px;
+  width: 150px;
   padding:12px 18px;
   border-radius:8px;
   background:#3adb5a;
@@ -924,6 +925,7 @@ span {
   text-decoration:none;
   display:inline-block;
   box-shadow:0 4px 10px rgba(58,219,90,.25);
+  margin: auto;
 }
 
 .price-btn:hover{
