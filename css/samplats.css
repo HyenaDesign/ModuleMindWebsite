@@ -386,78 +386,87 @@ span {
   text-align: left;
 }
 
-.foot {
-  width: 100%;
-  background: #efefef;
-  margin-top: 40px;
+.foot{
+  width:100%;
+  background:#efefef;
+  margin-top:40px;
 }
 
-.footwrap {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.2fr 0.65fr 0.75fr 0.8fr;
-  align-items: center;
+.footwrap{
+  max-width:1200px;
+  margin:0 auto;
+  padding:40px 36px;
+  display:grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap:40px;
+  align-items:start;
 }
 
-.footbrand,
+.footbrand{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.footlogo{
+  width:150px;
+  height:auto;
+}
+
+.foottext-desktop{
+  font-size:14px;
+  line-height:1.6;
+  color:#555;
+  max-width:260px;
+}
+
 .footL,
-.footR,
-.foott {
-  padding: 34px 36px;
-  min-height: 170px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.footbrand {
-  border-right: 1px solid rgba(119, 119, 119, 0.16);
-}
-
-.footlogo {
-  width: 160px;
-  height: auto;
-  display: block;
-  margin-bottom: 18px;
-}
-
-.foottext-desktop {
-  font-size: 14px;
-  line-height: 1.45;
-  color: #555;
-  max-width: 290px;
-}
-
-.foottext-mobile {
-  display: none;
+.footR{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
 }
 
 .footL h3,
-.footR h3 {
-  font-size: 16px;
-  font-weight: 700;
-  color: #444;
-  margin-bottom: 10px;
+.footR h3{
+  font-size:16px;
+  font-weight:700;
+  color:#444;
+  margin-bottom:6px;
 }
 
 .footL a,
-.footR a {
-  text-decoration: none;
-  color: #555;
-  font-size: 14px;
-  line-height: 1.9;
-  transition: .2s ease;
+.footR a{
+  text-decoration:none;
+  color:#555;
+  font-size:14px;
+  transition:.2s ease;
 }
 
 .footL a:hover,
-.footR a:hover {
-  color: #05c925;
+.footR a:hover{
+  color:#05c925;
 }
 
-.foott {
-  align-items: center;
-  justify-content: center;
+.foott{
+  display:flex;
+  align-items:flex-start;
+  justify-content:flex-start;
+}
+
+.footbtn{
+  font-size:14px;
+  padding:14px 22px;
+  border-radius:8px;
+  background:#3adb5a;
+  color:#fff;
+  text-decoration:none;
+  font-weight:700;
+  box-shadow:0 4px 10px rgba(58,219,90,.25);
+}
+
+.footbtn:hover{
+  background:#05c925;
 }
 
 .menu-toggle {
@@ -740,86 +749,52 @@ span {
     min-width: 220px;
   }
 
-  .foot {
-    width: 100%;
-    background: #efefef;
-    margin-top: 20px;
+  .footwrap{
+    grid-template-columns:1fr;
+    gap:30px;
+    padding:30px 20px;
   }
 
-  .footwrap {
-    max-width: 100%;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1.1fr 1fr 1fr;
-    align-items: start;
+  .footbrand{
+    align-items:flex-start;
   }
 
-  .footbrand,
+  .footlogo{
+    width:110px;
+  }
+
+  .foottext-desktop{
+    display:none;
+  }
+
+  .foottext-mobile{
+    display:block;
+    font-size:13px;
+    color:#555;
+  }
+
   .footL,
-  .footR,
-  .foott {
-    padding: 14px 12px;
-    min-height: auto;
-    justify-content: flex-start;
-  }
-
-  .footbrand {
-    border-right: 1px solid rgba(119, 119, 119, 0.18);
-  }
-
-  .footL {
-    border-right: 1px solid rgba(119, 119, 119, 0.18);
-  }
-
-  .footlogo {
-    width: 95px;
-    height: auto;
-    margin-bottom: 10px;
-  }
-
-  .foottext-desktop {
-    display: none;
-  }
-
-  .foottext-mobile {
-    display: block;
-    font-size: 12px;
-    line-height: 1.5;
-    color: #555;
-    max-width: 120px;
-    margin-bottom: 12px;
+  .footR{
+    gap:6px;
   }
 
   .footL h3,
-  .footR h3 {
-    font-size: 14px;
-    font-weight: 700;
-    color: #444;
-    margin-bottom: 8px;
+  .footR h3{
+    font-size:15px;
   }
 
   .footL a,
-  .footR a {
-    text-decoration: none;
-    color: #555;
-    font-size: 12px;
-    line-height: 1.9;
+  .footR a{
+    font-size:13px;
   }
 
-  .foott {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .foott{
+    margin-top:10px;
   }
 
-  .footbtn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    padding: 10px 14px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(58, 219, 90, 0.2);
+  .footbtn{
+    font-size:13px;
+    padding:12px 18px;
   }
 }
 
@@ -879,6 +854,10 @@ span {
 
 .priceTop{
   padding-bottom:18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .priceTop h2{
@@ -959,6 +938,7 @@ span {
 
   .pricing h1{
     font-size:24px;
+    text-align: center;
   }
 
   .pricing p{

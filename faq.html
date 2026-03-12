@@ -343,71 +343,140 @@ body{
     display:block;
 }
 
-footer {
-      background: #efefef;
-      margin-top: 10px;
-      border-top: 1px solid rgba(17, 17, 17, 0.05);
-    }
+.foot{
+  width:100%;
+  background:#efefef;
+  margin-top:40px;
+}
 
-    .footer-inner {
-      width: min(var(--section-width), calc(100% - 40px));
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1.3fr 1fr 1fr auto;
-      gap: 32px;
-      padding: 34px 0;
-      align-items: start;
-    }
+.footwrap{
+  max-width:1200px;
+  margin:0 auto;
+  padding:40px 36px;
+  display:grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap:40px;
+  align-items:start;
+}
 
-    .footer-brand img {
-      height: 34px;
-      margin-bottom: 12px;
-    }
+.footbrand{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
 
-    .footer-brand p,
-    .footer-links a {
-      color: var(--text-muted);
-      font-size: 0.92rem;
-      line-height: 1.6;
-      text-decoration: none;
-    }
+.footlogo{
+  width:150px;
+  height:auto;
+}
 
-    .footer-links h4 {
-      margin-bottom: 12px;
-      font-size: 1rem;
-      text-decoration: none;
-    }
+.foottext-desktop{
+  font-size:14px;
+  line-height:1.6;
+  color:#555;
+  max-width:260px;
+}
 
-    .footer-links {
-      display: flex;
-      flex-direction: column;
-      text-decoration: none;
-      gap: 6px;
-    }
+.footL,
+.footR{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
 
-    .footer-cta {
-      align-self: center;
-    }
+.footL h3,
+.footR h3{
+  font-size:16px;
+  font-weight:700;
+  color:#444;
+  margin-bottom:6px;
+}
 
-    .footer-cta a {
-      display: inline-block;
-      background: var(--green);
-      color: #fff;
-      padding: 10px 18px;
-      border-radius: 8px;
-      font-weight: 600;
-      transition: background-color 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
-      white-space: nowrap;
-      text-decoration: none;
-    }
+.footL a,
+.footR a{
+  text-decoration:none;
+  color:#555;
+  font-size:14px;
+  transition:.2s ease;
+}
 
-    .footer-cta a:hover {
-      background: var(--green-dark);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 22px rgba(34, 197, 94, 0.22);
-    }
+.footL a:hover,
+.footR a:hover{
+  color:#05c925;
+}
 
-/* ===== MOBILE RESPONSIVE ===== */
+.foott{
+  display:flex;
+  align-items:flex-start;
+  justify-content:flex-start;
+}
+
+.footbtn{
+  font-size:14px;
+  padding:14px 22px;
+  border-radius:8px;
+  background:#3adb5a;
+  color:#fff;
+  text-decoration:none;
+  font-weight:700;
+  box-shadow:0 4px 10px rgba(58,219,90,.25);
+}
+
+.footbtn:hover{
+  background:#05c925;
+}
+
+@media (max-width:768px){
+
+  .footwrap{
+    grid-template-columns:1fr;
+    gap:30px;
+    padding:30px 20px;
+  }
+
+  .footbrand{
+    align-items:flex-start;
+  }
+
+  .footlogo{
+    width:110px;
+  }
+
+  .foottext-desktop{
+    display:none;
+  }
+
+  .foottext-mobile{
+    display:block;
+    font-size:13px;
+    color:#555;
+  }
+
+  .footL,
+  .footR{
+    gap:6px;
+  }
+
+  .footL h3,
+  .footR h3{
+    font-size:15px;
+  }
+
+  .footL a,
+  .footR a{
+    font-size:13px;
+  }
+
+  .foott{
+    margin-top:10px;
+  }
+
+  .footbtn{
+    font-size:13px;
+    padding:12px 18px;
+  }
+
+}
 
 @media (max-width:600px){
 
@@ -512,41 +581,44 @@ Populaire onderwerpen: Modules delen
 Blader door de meest voorkomende onderwerpen en vind snel een antwoord op je vraag.
 </p>
 
-<!-- THEME 1 --> <div class="theme"> <button class="theme-btn"> <div class="theme-left"> 📄 <span>Modules maken</span> </div> <div class="theme-right"> <span class="count">87</span> <span class="arrow">›</span> </div> </button> <div class="questions"> <div class="question"> <button class="question-btn"> Hoe maak ik een module? </button> <div class="answer"> Ga naar het dashboard en klik op "Nieuwe module maken". </div> </div> <div class="question"> <button class="question-btn"> Kan ik een module bewerken? </button> <div class="answer"> Ja. Open de module en klik op "bewerken". </div> </div> </div> </div> <!-- THEME 2 --> <div class="theme"> <button class="theme-btn"> <div class="theme-left"> 📁 <span>Oefeningen delen</span> </div> <div class="theme-right"> <span class="count">32</span> <span class="arrow">›</span> </div> </button> <div class="questions"> <div class="question"> <button class="question-btn"> Hoe deel ik oefeningen? </button> <div class="answer"> Klik op de knop "delen" naast de oefening. </div> </div> <div class="question"> <button class="question-btn"> Met wie kan ik oefeningen delen? </button> <div class="answer"> Met studenten of collega's. </div> </div> </div> </div> <!-- THEME 3 --> <div class="theme"> <button class="theme-btn"> <div class="theme-left"> 📊 <span>Resultaten en voortgang</span> </div> <div class="theme-right"> <span class="count">13</span> <span class="arrow">›</span> </div> </button> <div class="questions"> <div class="question"> <button class="question-btn"> Waar zie ik resultaten? </button> <div class="answer"> Resultaten vind je in het dashboard bij statistieken. </div> </div> </div> </div> <!-- THEME 4 --> <div class="theme"> <button class="theme-btn"> <div class="theme-left"> 💬 <span>Algemene vragen</span> </div> <div class="theme-right"> <span class="count">4</span> <span class="arrow">›</span> </div> </button> <div class="questions"> <div class="question"> <button class="question-btn"> Hoe verander ik mijn wachtwoord? </button> <div class="answer"> Ga naar accountinstellingen en kies "wachtwoord wijzigen". </div> </div> </div> </div>
+<div class="theme"> <button class="theme-btn"> <div class="theme-left"> 📄 <span>Modules maken</span> </div> <div class="theme-right"> <span class="count">87</span> <span class="arrow">›</span> </div> </button> <div class="questions"> <div class="question"> <button class="question-btn"> Hoe maak ik een module? </button> <div class="answer"> Ga naar het dashboard en klik op "Nieuwe module maken". </div> </div> <div class="question"> <button class="question-btn"> Kan ik een module bewerken? </button> <div class="answer"> Ja. Open de module en klik op "bewerken". </div> </div> </div> </div> <!-- THEME 2 --> <div class="theme"> <button class="theme-btn"> <div class="theme-left"> 📁 <span>Oefeningen delen</span> </div> <div class="theme-right"> <span class="count">32</span> <span class="arrow">›</span> </div> </button> <div class="questions"> <div class="question"> <button class="question-btn"> Hoe deel ik oefeningen? </button> <div class="answer"> Klik op de knop "delen" naast de oefening. </div> </div> <div class="question"> <button class="question-btn"> Met wie kan ik oefeningen delen? </button> <div class="answer"> Met studenten of collega's. </div> </div> </div> </div> <!-- THEME 3 --> <div class="theme"> <button class="theme-btn"> <div class="theme-left"> 📊 <span>Resultaten en voortgang</span> </div> <div class="theme-right"> <span class="count">13</span> <span class="arrow">›</span> </div> </button> <div class="questions"> <div class="question"> <button class="question-btn"> Waar zie ik resultaten? </button> <div class="answer"> Resultaten vind je in het dashboard bij statistieken. </div> </div> </div> </div> <!-- THEME 4 --> <div class="theme"> <button class="theme-btn"> <div class="theme-left"> 💬 <span>Algemene vragen</span> </div> <div class="theme-right"> <span class="count">4</span> <span class="arrow">›</span> </div> </button> <div class="questions"> <div class="question"> <button class="question-btn"> Hoe verander ik mijn wachtwoord? </button> <div class="answer"> Ga naar accountinstellingen en kies "wachtwoord wijzigen". </div> </div> </div> </div>
 
 </div>
 </section>
 
-<footer>
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <img src="images/Group 5.png" alt="ModuleMind Logo">
-        <p>
-          Innovatief platform voor AI ondersteund leren<br>
-          voor het secundair onderwijs
-        </p>
-      </div>
+<footer class="foot">
+  <div class="footwrap">
 
-      <div class="footer-links">
-        <h4>Pagina's</h4>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Pricing</a>
-        <a href="#">FAQ</a>
-      </div>
-
-      <div class="footer-links">
-        <h4>Product</h4>
-        <a href="#">AI-oefeningen</a>
-        <a href="#">Feedback systeem</a>
-        <a href="#">Study analyse</a>
-      </div>
-
-      <div class="footer-cta">
-        <a href="#">Probeer het nu !</a>
-      </div>
+    <div class="footbrand">
+      <img src="images/Logo.svg" alt="ModuleMind logo" class="footlogo">
+      <p class="foottext-desktop">
+        Innovatief platform voor AI ondersteund leren
+        voor het secundair onderwijs
+      </p>
+      <p class="foottext-mobile">Innovatief platform</p>
     </div>
-  </footer>
+
+    <div class="footL">
+      <h3>Pagina’s</h3>
+      <a href="home.html">Home</a>
+      <a href="index.html">About</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="footR">
+      <h3>Product</h3>
+      <a href="#">AI-oefeningen</a>
+      <a href="#">Feedback systeem</a>
+      <a href="#">Study analyse</a>
+    </div>
+
+    <div class="foott">
+      <a href="pricing.html" class="footbtn">Probeer het nu!</a>
+    </div>
+
+  </div>
+</footer>
 
 <script>
 

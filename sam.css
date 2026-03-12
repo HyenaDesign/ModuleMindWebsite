@@ -117,6 +117,89 @@ body {
     border-radius: 2px;
 }
 
+.foot{
+  width:100%;
+  background:#efefef;
+  margin-top:40px;
+}
+
+.footwrap{
+  max-width:1200px;
+  margin:0 auto;
+  padding:40px 36px;
+  display:grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap:40px;
+  align-items:start;
+}
+
+.footbrand{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.footlogo{
+  width:150px;
+  height:auto;
+}
+
+.foottext-desktop{
+  font-size:14px;
+  line-height:1.6;
+  color:#555;
+  max-width:260px;
+}
+
+.footL,
+.footR{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.footL h3,
+.footR h3{
+  font-size:16px;
+  font-weight:700;
+  color:#444;
+  margin-bottom:6px;
+}
+
+.footL a,
+.footR a{
+  text-decoration:none;
+  color:#555;
+  font-size:14px;
+  transition:.2s ease;
+}
+
+.footL a:hover,
+.footR a:hover{
+  color:#05c925;
+}
+
+.foott{
+  display:flex;
+  align-items:flex-start;
+  justify-content:flex-start;
+}
+
+.footbtn{
+  font-size:14px;
+  padding:14px 22px;
+  border-radius:8px;
+  background:#3adb5a;
+  color:#fff;
+  text-decoration:none;
+  font-weight:700;
+  box-shadow:0 4px 10px rgba(58,219,90,.25);
+}
+
+.footbtn:hover{
+  background:#05c925;
+}
+
 /* Mobile styles */
 @media (max-width: 768px) {
 
@@ -145,6 +228,54 @@ body {
     .hamburger {
         display: flex;
     }
+     .footwrap{
+    grid-template-columns:1fr;
+    gap:30px;
+    padding:30px 20px;
+  }
+
+  .footbrand{
+    align-items:flex-start;
+  }
+
+  .footlogo{
+    width:110px;
+  }
+
+  .foottext-desktop{
+    display:none;
+  }
+
+  .foottext-mobile{
+    display:block;
+    font-size:13px;
+    color:#555;
+  }
+
+  .footL,
+  .footR{
+    gap:6px;
+  }
+
+  .footL h3,
+  .footR h3{
+    font-size:15px;
+  }
+
+  .footL a,
+  .footR a{
+    font-size:13px;
+  }
+
+  .foott{
+    margin-top:10px;
+  }
+
+  .footbtn{
+    font-size:13px;
+    padding:12px 18px;
+  }
+
 }
 
 /* ===== HERO ===== */
@@ -286,79 +417,4 @@ body {
     height: 0%;
     background: #2ca65c;
     transition: height 0.15s ease;
-}
-
-/* Algemene footer styling */
-footer {
-  background-color: #f8f8f8;
-  padding: 40px 20px;
-  font-family: Arial, sans-serif;
-  color: #333;
-}
-
-/* Binnencontainer */
-.footer-inner {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 20px;
-}
-
-/* Merk / logo sectie */
-.footer-brand img {
-  width: 150px; /* pas aan naar echte logo grootte */
-  margin-bottom: 10px;
-}
-
-.footer-brand p {
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-/* Link secties */
-.footer-links h4 {
-  font-size: 16px;
-  margin-bottom: 10px;
-}
-
-.footer-links a {
-  display: block;
-  text-decoration: none;
-  color: #333;
-  font-size: 14px;
-  margin-bottom: 5px;
-}
-
-.footer-links a:hover {
-  color: #007f00; /* lichte hover effect */
-}
-
-/* CTA knop */
-.footer-cta a {
-  display: inline-block;
-  background-color: #28c840; /* groene knop */
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-
-.footer-cta a:hover {
-  background-color: #1fa62d;
-}
-
-/* Responsiveness */
-@media (max-width: 768px) {
-  .footer-inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .footer-cta {
-    margin-top: 20px;
-  }
 }
