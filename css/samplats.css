@@ -12,6 +12,10 @@ body {
   background-repeat: no-repeat;
 }
 
+span {
+  font-family: "DM Sans", sans-serif;
+}
+
 .navbar {
     position: sticky;
     top: 0;
