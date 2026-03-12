@@ -126,6 +126,7 @@ body {
     justify-content: center;
     gap: 20px;
     overflow: hidden;               /* ruimte tussen cards en indicator */
+    margin-bottom: 80px;
 }
 
 .patch-container {
@@ -238,4 +239,79 @@ body {
     height: 0%;
     background: #2ca65c;
     transition: height 0.15s ease;
+}
+
+/* Algemene footer styling */
+footer {
+  background-color: #f8f8f8;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Binnencontainer */
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+/* Merk / logo sectie */
+.footer-brand img {
+  width: 150px; /* pas aan naar echte logo grootte */
+  margin-bottom: 10px;
+}
+
+.footer-brand p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Link secties */
+.footer-links h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.footer-links a:hover {
+  color: #007f00; /* lichte hover effect */
+}
+
+/* CTA knop */
+.footer-cta a {
+  display: inline-block;
+  background-color: #28c840; /* groene knop */
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.footer-cta a:hover {
+  background-color: #1fa62d;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-cta {
+    margin-top: 20px;
+  }
 }
