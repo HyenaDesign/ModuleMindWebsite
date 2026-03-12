@@ -14,36 +14,29 @@
 
 <body>
 
-  <header class="nv">
-    <div class="nvb">
-      <div class="lg">
-        <img src="images/Logo.svg" alt="ModuleMind logo" class="lm" />
-      </div>
+  <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-placeholder"><img src="assets/FINAL-LOGO.png" alt="ModuleMind Logo"></div>
+                <span>ModuleMind</span>
+            </div>
 
-      <nav class="nvs">
-        <a href="#" class="nlk">Home</a>
-        <a href="about.html" class="nlk act">About</a>
-        <a href="pricing.html" class="nlk">Pricing</a>
-        <a href="contact.html" class="nlk">Contact</a>
-      </nav>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="Home.html" >Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
 
-      <a href="pricing.html" class="abtn">Probeer het nu!</a>
+            <button class="cta-btn">Probeer het nu!</button>
+            <button class="hamburger" id="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+        </div>
+    </nav>
 
-      <button class="menu-toggle" aria-label="Open menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-
-    <div class="mobile-menu">
-      <a href="#" class="mobile-link">Home</a>
-      <a href="about.html" class="mobile-link active-mobile">About</a>
-      <a href="pricing.html" class="mobile-link">Pricing</a>
-      <a href="contact.html" class="mobile-link">Contact</a>
-      <a href="pricing.html" class="mobile-btn">Probeer het nu!</a>
-    </div>
-  </header>
 
   <section class="about">
     <h1>Over ModuleMind</h1>
@@ -169,5 +162,13 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
 </body>
 </html>

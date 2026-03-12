@@ -8,6 +8,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Cherry+Cream+Soda&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kdam+Thmor+Pro&family=Kite+One&family=Momo+Trust+Sans:wght@200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Radio+Canada:ital,wght@0,300..700;1,300..700&family=Rubik+Marker+Hatch&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <meta property="og:title" content="ModuleMind">
+  <meta property="og:description" content="Zet lesmateriaal om in interactieve AI-modules. Slimmer studeren met ModuleMind.">
+  <meta property="og:image" content="https://modulemind.com/images/banner-preview.png">
+  <meta property="og:url" content="https://modulemind.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ModuleMind">
+
+<!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ModuleMind">
+  <meta name="twitter:description" content="Zet lesmateriaal om in interactieve AI-modules.">
+  <meta name="twitter:image" content="https://modulemind.com/images/banner-preview.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Cherry+Cream+Soda&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kdam+Thmor+Pro&family=Kite+One&family=Momo+Trust+Sans:wght@200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Radio+Canada:ital,wght@0,300..700;1,300..700&family=Rubik+Marker+Hatch&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -19,14 +34,19 @@
                 <span>ModuleMind</span>
             </div>
 
-            <ul class="nav-links">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="Home.html" class="active">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
 
             <button class="cta-btn">Probeer het nu!</button>
+            <button class="hamburger" id="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
         </div>
     </nav>
 
@@ -77,5 +97,13 @@
   </footer>
     <script src="script.js"></script>
 </div>
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
 </body>
 </html>
