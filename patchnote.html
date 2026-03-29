@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ModuleMind - Nieuws en Patch Notes</title>
+    <title>ModuleMind - Nieuwsbrieven</title>
     <link rel="stylesheet" href="sam.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Cherry+Cream+Soda&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kdam+Thmor+Pro&family=Kite+One&family=Momo+Trust+Sans:wght@200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Radio+Canada:ital,wght@0,300..700;1,300..700&family=Rubik+Marker+Hatch&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Cherry+Cream+Soda&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kdam+Thmor+Pro&family=Kite+One&family=Momo+Trust+Sans:wght@200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Outfit:ital,wght@100..900&family=Radio+Canada:ital,wght@0,300..700;1,300..700&family=Rubik+Marker+Hatch&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
   <meta property="og:title" content="ModuleMind">
   <meta property="og:description" content="Zet lesmateriaal om in interactieve AI-modules. Slimmer studeren met ModuleMind.">
   <meta property="og:image" content="https://modulemind.com/images/banner-preview.png">
@@ -62,8 +62,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- ================= HERO ================= -->
     <section class="hero">
-        <h1>Nieuws en patch notes</h1>
-        <p>Blijf up to date met alle nieuwtjes en patch notes van ModuleMind en zie hoe het evolueert.</p>
+        <h1>Nieuwsbrieven en updates</h1>
+        <p>Blijf op de hoogte van alles wat er gebeurt binnen ModuleMind. Ontvang nieuws, achtergronden en productupdates rechtstreeks in je inbox.</p>
+    </section>
+
+    <!-- ================= CTA NIEUWSBRIEF ================= -->
+    <section class="newsletter-cta">
+        <div class="newsletter-card">
+            <h2>Schrijf je in voor de nieuwsbrief</h2>
+            <p>Ontvang de nieuwste nieuwsbrieven over productupdates, nieuwe functies en exclusieve tips voor beter leren met ModuleMind.</p>
+            <form class="newsletter-form" action="#" method="post">
+                <input type="email" name="email" placeholder="Vul je e-mailadres in" aria-label="E-mailadres" required>
+                <button type="submit" class="cta-btn small">Inschrijven</button>
+            </form>
+        </div>
     </section>
 
     <!-- ================= PATCH NOTES ================= -->
@@ -71,9 +83,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <section class="patch-container" id="patchContainer">
         <!-- JS fills this automatically -->
     </section>
-    <div class="scroll-indicator">
-        <div class="scroll-progress" id="scrollProgress"></div>
-    </div>
 </section>
 
 <footer class="foot">
@@ -111,7 +120,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </footer>
 
     <script src="script.js"></script>
-</div>
 <script>
   const hamburger = document.getElementById('hamburger');
   const navLinks = document.getElementById('navLinks');

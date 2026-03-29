@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     card.classList.add("patch-card");
 
                     card.innerHTML = `
-                        <div class="patch-title">Patch notes ${patch.version}</div>
+                        <div class="patch-title">Nieuwsbrief ${patch.version}</div>
                         <div class="patch-date">${patch.date}</div>
                         <div class="patch-content">
                             ${patch.content.replace(/\n/g, "<br>")}
@@ -50,6 +50,8 @@ document.addEventListener("DOMContentLoaded", () => {
 const patchContainer = document.getElementById("patchContainer");
 const scrollProgress = document.getElementById("scrollProgress");
 
+if (patchContainer && scrollProgress) {
+
 patchContainer.addEventListener("scroll", () => {
     const scrollTop = patchContainer.scrollTop;
     const scrollHeight = patchContainer.scrollHeight - patchContainer.clientHeight;
@@ -57,3 +59,4 @@ patchContainer.addEventListener("scroll", () => {
     const progress = (scrollTop / scrollHeight) * 100;
     scrollProgress.style.height = progress + "%";
 });
+}

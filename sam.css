@@ -10,13 +10,17 @@ html {
 }
 
 html, body {
-    height: 100%;
-    overflow: hidden;
+    min-height: 100%;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 @media (max-width: 768px) {
     html, body {
         overflow: auto;
+        min-height: auto;
     }
 }
 
@@ -298,25 +302,92 @@ body {
 .hero p {
     color: #666;
     font-size: 16px;
-    max-width: 500px;
+    max-width: 640px;
     margin: auto;
     text-align: left;
 }
 
-/* ===== PATCH NOTES ===== */
-.patch-wrapper {
-    flex: 1;
+.newsletter-cta {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto 32px;
+    padding: 40px 20px 0;
     display: flex;
     justify-content: center;
+}
+
+.newsletter-card {
+    width: 100%;
+    max-width: 100%;
+    background: rgba(255,255,255,0.96);
+    border-radius: 24px;
+    padding: 36px 36px 32px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.newsletter-card h2 {
+    font-size: 30px;
+    margin-bottom: 12px;
+    color: #1f4331;
+}
+
+.newsletter-card p {
+    font-size: 16px;
+    color: #555;
+    margin: 0 auto 24px;
+    max-width: 720px;
+    line-height: 1.75;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.newsletter-form input {
+    flex: 1 1 320px;
+    min-width: 240px;
+    padding: 14px 16px;
+    border: 1px solid #d8d8d8;
+    border-radius: 12px;
+    font-size: 15px;
+    color: #333;
+}
+
+.newsletter-form input:focus {
+    outline: none;
+    border-color: #26C743;
+    box-shadow: 0 0 0 4px rgba(38,199,67,0.12);
+}
+
+.newsletter-form button.cta-btn.small {
+    padding: 14px 24px;
+    min-width: 170px;
+    border-radius: 12px;
+}
+
+/* ===== PATCH NOTES ===== */
+.patch-wrapper {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto 80px;
+    display: flex;
     gap: 20px;
-    overflow: hidden;               /* ruimte tussen cards en indicator */
-    margin-bottom: 80px;
+    background: rgba(255,255,255,0.92);
+    border-radius: 28px;
+    padding: 24px;
+    box-shadow: 0 24px 70px rgba(0,0,0,0.08);
+    overflow: hidden;
+    align-items: stretch;
 }
 /* ===== MOBILE FIX FOR PATCH CARDS ===== */
 @media (max-width: 768px) {
     html, body {
         overflow: auto; /* laat mobiel scrollen */
-        height: auto;   /* voorkom dat 100% height het blokkeert */
+        min-height: auto;   /* voorkom dat 100% height het blokkeert */
     }
 
     .patch-wrapper {
@@ -342,16 +413,30 @@ body {
         margin: 0 auto;         /* blijft gecentreerd */
     }
 
-    .scroll-indicator {
-        display: none;          /* indicator vaak niet handig op mobiel */
+    .newsletter-card {
+        padding: 24px 18px 20px;
+        box-shadow: 0 14px 36px rgba(0,0,0,0.08);
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .newsletter-form button.cta-btn.small {
+        width: 100%;
+        min-width: auto;
     }
 }
 
 .patch-container {
-    width: 900px;
-    height: 100%;
+    width: 100%;
+    max-width: 900px;
+    min-height: 420px;
+    max-height: 700px;
     overflow-y: auto;
     scroll-snap-type: y mandatory;
+    padding-right: 8px;
 }
 
 /* Chrome, Edge, Safari */
@@ -439,22 +524,3 @@ body {
     font-weight: 500;
 }
 
-.scroll-indicator {
-    width: 6px;
-    height: 500px;
-
-    position: sticky;
-    top: 50%;
-    transform: translateY(-50%);
-
-    background: rgba(0,0,0,0.1);
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.scroll-progress {
-    width: 100%;
-    height: 0%;
-    background: #2ca65c;
-    transition: height 0.15s ease;
-}
