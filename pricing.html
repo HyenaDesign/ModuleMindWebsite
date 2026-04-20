@@ -6,15 +6,14 @@
   <title>ModuleMind</title>
   <meta name="description" content="ModuleMind zet lesmateriaal om in interactieve AI-oefeningen met behulp van artificiële intelligentie.">
   <meta name="author" content="ModuleMind">
-<!-- Open Graph -->
+  <!-- Open Graph -->
   <meta property="og:title" content="ModuleMind">
   <meta property="og:description" content="Zet lesmateriaal om in interactieve AI-modules. Slimmer studeren met ModuleMind.">
   <meta property="og:image" content="https://modulemind.com/images/banner.svg">
   <meta property="og:url" content="https://modulemind.com/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="ModuleMind">
-
-<!-- Twitter Card -->
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="ModuleMind">
   <meta name="twitter:description" content="Zet lesmateriaal om in interactieve AI-modules.">
@@ -25,145 +24,204 @@
   <link rel="stylesheet" href="css/samplats.css" />
   <link rel="icon" type="image/png" href="images/Favicon.svg">
   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NRNB7F7Q');</script>
-<!-- End Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NRNB7F7Q');</script>
+  <!-- End Google Tag Manager -->
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NRNB7F7Q"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+
 <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <div class="logo-placeholder"> <a href="index.html"><img src="assets/FINAL-LOGO.png" alt="ModuleMind Logo"></div></a>
-                <span>ModuleMind</span>
-            </div>
+  <div class="nav-container">
+    <div class="logo">
+      <div class="logo-placeholder"> <a href="index.html"><img src="assets/FINAL-LOGO.png" alt="ModuleMind Logo"></div></a>
+      <span>ModuleMind</span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">Over ons</a></li>
+      <li><a href="pricing.html" class="active">Prijzen</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
 
-            <ul class="nav-links" id="navLinks">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">Over ons</a></li>
-    <li><a href="pricing.html" class="active">Prijzen</a></li>
-    <li><a href="contact.html">Contact</a></li>
-</ul>
-
-            <button class="hamburger" id="hamburger">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-        </div>
-    </nav>
-
-
-<section class="pricing">
- <h1>
-  Van studiemateriaal naar<br>
-  interactieve AI-oefeningen
-</h1>
-  <p>
-    Start gratis en ontdek hoe ModuleMind leren slimmer maakt met
-    AI-ondersteunde oefeningen en direct feedback
-  </p>
+<!-- PRICING HERO -->
+<section class="pricing-hero">
+  <span class="pricing-topbadge">TRANSPARANT &amp; EERLIJK</span>
+  <h1>Kies het plan dat bij jou past</h1>
+  <p>Begin gratis en upgrade wanneer je klaar bent om slimmer te studeren.</p>
+  <div class="pricing-trust-row">
+    <span class="pricing-trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#3adb5a" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      Direct starten
+    </span>
+    <span class="pricing-trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#3adb5a" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      Geen verborgen kosten
+    </span>
+    <span class="pricing-trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#3adb5a" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      Altijd opzegbaar
+    </span>
+  </div>
 </section>
 
-<section class="pricingg">
+<!-- PRICING CARDS -->
+<section class="pricingg-new">
 
-  <div class="pricecard">
-    <div class="priceTop">
-      <h2>Starter</h2>
-      <img src="images/Rocket.svg" alt="Starter plan icoon" class="price-icon">
-      <p class="price-value">€ 0 <span>/ maand</span></p>
+  <!-- STARTER -->
+  <div class="pricecard-new">
+    <p class="plan-label-new">STARTER</p>
+    <h2 class="plan-title-new">Start gratis</h2>
+    <p class="plan-sub-new">Ontdek de kracht van AI-leren.</p>
+
+    <div class="plan-price-new">
+      <span class="price-big-new">€0</span>
+      <span class="price-period-new">/ maand</span>
     </div>
 
     <div class="price-divider"></div>
 
-    <ul class="price-features">
-      <li>AI-oefeningen genereren</li>
-      <li>Basis studieanalyse</li>
-      <li>Beperkte opslag</li>
+    <p class="features-label-new">Inclusief:</p>
+    <ul class="price-features-new">
+      <li>5 AI-oefeningen per dag</li>
+      <li>Basis studiestatistieken</li>
+      <li>Beperkte AI-feedback</li>
       <li>Toegang tot kernfunctionaliteit</li>
     </ul>
 
-    <a href="pricing.html" class="price-btn">Probeer het nu!</a>
+    <div class="lock-box-new">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      <p>Stap-voor-stap uitleg, onbeperkt oefenen en examensimulaties zijn enkel beschikbaar in Student.</p>
+    </div>
+
+    <a href="pricing.html" class="price-btn-new price-btn-ghost-new">Start gratis</a>
   </div>
 
-  <div class="pricecard featured">
-    <div class="priceTop">
-      <h2>Student</h2>
-      <img src="images/Cap.svg" alt="Student plan icoon" class="price-icon">
-      <p class="price-value">€ 9 <span>/ maand</span></p>
+  <!-- STUDENT (featured) -->
+  <div class="pricecard-new pricecard-featured-new">
+    <div class="featured-badge-new">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      MEEST GEKOZEN
+    </div>
+
+    <p class="plan-label-new">STUDENT</p>
+    <h2 class="plan-title-new">Verbeter je punten</h2>
+    <p class="plan-sub-new">Ontgrendel je volledige potentieel.</p>
+
+    <div class="plan-price-new">
+      <span class="price-big-new">€9</span>
+      <span class="price-period-new">/ maand</span>
+    </div>
+
+    <div class="highlight-box-new">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#0F6E56" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      <p><strong>Verhoog je slaagkansen</strong> met gerichte AI-begeleiding op maat.</p>
     </div>
 
     <div class="price-divider"></div>
 
-    <ul class="price-features">
+    <p class="features-label-new">Alles in Starter, plus:</p>
+    <ul class="price-features-new price-features-green-new">
       <li>Onbeperkte AI-oefeningen</li>
-      <li>Gedetailleerde studieanalyse</li>
-      <li>Persoonlijke feedback</li>
-      <li>Opslaan van studiemateriaal</li>
-      <li>Prioritaire updates</li>
+      <li>Stap-voor-stap AI-uitleg</li>
+      <li>Persoonlijke leeranalyse per vak</li>
+      <li>Examensimulaties</li>
+      <li>Slimme studietips op maat</li>
+      <li>Prioritaire updates &amp; nieuwe functies</li>
     </ul>
 
-    <a href="pricing.html" class="price-btn">Probeer het nu!</a>
+    <a href="pricing.html" class="price-btn-new price-btn-primary-new">Upgrade naar Student</a>
   </div>
 
-  <div class="pricecard">
-    <div class="priceTop">
-      <h2>School</h2>
-      <img src="images/School.svg" alt="School plan icoon" class="price-icon">
-      <p class="price-value">Op aanvraag</p>
+  <!-- SCHOOL -->
+  <div class="pricecard-new">
+    <p class="plan-label-new plan-label-blue-new">SCHOOL</p>
+    <h2 class="plan-title-new">Voor scholen &amp; leerkrachten</h2>
+    <p class="plan-sub-new">Geef je leerlingen een voorsprong.</p>
+
+    <div class="plan-price-new">
+      <span class="price-prefix-new">Vanaf</span>
+      <span class="price-big-new">€4,50</span>
+      <span class="price-period-new">per leerling / maand</span>
     </div>
 
     <div class="price-divider"></div>
 
-    <ul class="price-features">
-      <li>Alles van student-plan</li>
-      <li>Multi-student toegang</li>
-      <li>Dashboard voor leerkracht</li>
-      <li>Integratie met schoolplatformen</li>
+    <p class="features-label-new features-label-blue-new">Alles in Student, plus:</p>
+    <ul class="price-features-new price-features-blue-new">
+      <li>Dashboard voor leerkrachten</li>
+      <li>Volg prestaties per leerling &amp; klas</li>
+      <li>Bulk accounts &amp; klassenbeheer</li>
+      <li>Rapporten &amp; inzichten</li>
+      <li>Integratie met Smartschool / LMS</li>
+      <li>Dedicated support &amp; onboarding</li>
     </ul>
 
-    <a href="pricing.html" class="price-btn">Probeer het nu!</a>
+    <a href="contact.html" class="price-btn-new price-btn-outline-new">Vraag demo aan</a>
   </div>
 
+</section>
+
+<!-- GUARANTEE -->
+<div class="pricing-guarantee">
+  <svg viewBox="0 0 24 24" fill="none" stroke="#3adb5a" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+  30 dagen niet goed, geld terug garantie
+</div>
+
+<!-- SOCIAL PROOF -->
+<section class="pricing-social-proof">
+  <div class="sp-card-new">
+    <span class="sp-num-new">10.000+</span>
+    <span class="sp-label-new">studenten gebruiken ModuleMind</span>
+  </div>
+  <div class="sp-card-new">
+    <span class="sp-num-new">4,8 / 5</span>
+    <span class="sp-label-new">op basis van 1.200+ reviews</span>
+  </div>
+  <div class="sp-card-new">
+    <span class="sp-num-new">+30%</span>
+    <span class="sp-label-new">betere resultaten gemiddeld</span>
+  </div>
 </section>
 
 <footer class="foot">
   <div class="footwrap">
-
     <div class="footbrand">
       <img src="images/Logo.svg" alt="ModuleMind logo" class="footlogo">
       <p class="foottext-desktop">
         Innovatief platform voor AI ondersteund leren
         voor het secundair onderwijs
       </p>
-      <p class="foottext-mobile">Innovatief platform</p>
     </div>
-
     <div class="footL">
-      <h3>Pagina’s</h3>
+      <h3>Pagina's</h3>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="pricing.html">Pricing</a>
       <a href="contact.html">Contact</a>
     </div>
-
     <div class="footR">
       <h3>Product</h3>
       <a href="#">AI-oefeningen</a>
       <a href="#">Feedback systeem</a>
       <a href="#">Study analyse</a>
     </div>
-
     <div class="foott">
       <a href="pricing.html" class="footbtn">Probeer het nu!</a>
     </div>
-
   </div>
 </footer>
 
@@ -171,12 +229,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>
   const hamburger = document.getElementById('hamburger');
   const navLinks = document.getElementById('navLinks');
-
   hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
   });
 </script>
-
 </body>
 </html>
-
