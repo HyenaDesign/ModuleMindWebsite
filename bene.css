@@ -252,6 +252,12 @@
       gap: 14px;
     }
 
+    .heroButtons a:nth-of-type(2) {
+      background-color: #f3f4f6;
+      color: #111;
+      border: 1px solid rgba(17, 17, 17, 0.08);
+    }
+
     .heroContent .btn {
       padding: 14px 26px;
       font-weight: 600;
@@ -840,6 +846,22 @@
       flex-direction: column;
       gap: 14px;
     }
+
+    .footsocials {
+  display: flex;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.footsocials a {
+  font-size: 20px;
+  color: #555;
+  transition: .2s ease;
+}
+
+.footsocials a:hover {
+  color: #05c925;
+}
 
     .footlogo {
       width: 150px;

@@ -149,6 +149,22 @@ body {
   gap:14px;
 }
 
+.footsocials {
+  display: flex;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.footsocials a {
+  font-size: 20px;
+  color: #555;
+  transition: .2s ease;
+}
+
+.footsocials a:hover {
+  color: #05c925;
+}
+
 .footlogo{
   width:150px;
   height:auto;
