@@ -761,16 +761,8 @@
       align-items: center;
       gap: 28px;
       padding: 28px 32px;
-      background: rgba(255, 255, 255, 0.88);
-      border: 1px solid rgba(17, 17, 17, 0.08);
       border-radius: 18px;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-
-    .patchnote-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.08);
+      transition: transform 0.25s ease;
     }
 
     .patchnote-text h2 {
